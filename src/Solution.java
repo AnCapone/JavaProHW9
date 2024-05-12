@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.HashSet;
 
 
@@ -17,5 +18,17 @@ public class Solution {
             }
         }
         return false;
+    }
+
+    public int[] twoSum(int[] numbers, int target) {
+        HashMap<Integer, Integer> numberIndexes = new HashMap<>();
+        for (int i = 0; i < numbers.length; i++) {
+            int difference = target - numbers[i];
+            if (numberIndexes.containsKey(difference)) {
+                return new int[]{numberIndexes.get(difference), i};
+            }
+            numberIndexes.put(numbers[i], i);
+        }
+        throw new IllegalArgumentException("No solution found!");
     }
 }
