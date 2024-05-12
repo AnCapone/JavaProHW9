@@ -4,6 +4,7 @@ public class Main {
         System.out.println(solution.isPalindrome("A man, a plan, a canal: Panama"));
         System.out.println(solution.isPalindrome("race a car"));
         System.out.println(solution.isPalindrome(" "));
+        System.out.println(solution.isPalindrome("ab_a"));
 
     }
 }
